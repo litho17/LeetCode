@@ -1,7 +1,7 @@
-### About
+## About
 This repo contains my thoughts and solutions to the problems in [LeetCode](https://leetcode.com/).
 
-### Motivation
+## Motivation
 My motivation of maintaining this repo is to
 
 - Improve my problem-solving skills, i.e. 
