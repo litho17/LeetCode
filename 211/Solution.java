@@ -34,18 +34,14 @@ class WordDictionary {
     }
     
     boolean search(char[] word) {
-        // for (int i = 0; i < word.length; i++)
-            // System.out.print(word[i]);
-        // System.out.println();
         Node tmp = root;
         for (int i = 0; i < word.length; i++) {
             if (word[i] == '.') {
                 for (int j = 0; j < 26; j++) {
-                    char[] newWord = new char[word.length];
-                    for (int k = 0; k < word.length; k++)
-                        newWord[k] = word[k];
-                    newWord[i] = (char)('a'+j);
-                    boolean exist = search(newWord);
+                    char old = word[i];
+                    word[i] = (char)('a'+j);
+                    boolean exist = search(word);
+                    word[i] = old;
                     if (exist) return true;
                 }
                 return false;
@@ -66,5 +62,6 @@ class WordDictionary {
  * boolean param_2 = obj.search(word);
  */
 
-// Runtime: 125 ms, faster than 50.00% of Java online submissions for Add and Search Word - Data structure design.
-// Memory Usage: 49.7 MB, less than 47.56% of Java online submissions for Add and Search Word - Data structure design.
+
+// Runtime: 104 ms, faster than 73.93% of Java online submissions for Add and Search Word - Data structure design.
+// Memory Usage: 50 MB, less than 43.36% of Java online submissions for Add and Search Word - Data structure design.
