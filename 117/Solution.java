@@ -21,7 +21,7 @@ class Node {
     How did I come up with the algorithm?
     1. Pre-condition before invoking function helper(root) in Problem 116: root.next is known
     2. Shall we visit root.left or root.right first? root.right, because establishing pre-conditions for root.left depends on establishing pre-conditions for root.right
-    3. To establish this pre-condition for root.right before invoking helper(root.right), we need a stronger pre-condition: root.next* is known, i.e. root.next, root.next.next, root.next.next, ... are all known
+    3. To establish the pre-condition defined in Step 1 for root.right before invoking helper(root.right), we need a stronger pre-condition: root.next* is known, i.e. root.next, root.next.next, root.next.next, ... are all known
     4. To establish the stronger pre-condition defined in Step 3 for root.right, we need to ...
 */
 
