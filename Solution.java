@@ -10,7 +10,7 @@ class Solution {
 			return;
 		}
 		int min = Integer.MAX_VALUE;
-		for (int j=start; j<=end; j++) {
+		for (int j=(start+end)/2; j<=end; j++) {
 			int tmp1 = 0;
 			int tmp2 = 0;
 			if (j-1>start) {
