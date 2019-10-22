@@ -10,6 +10,9 @@ class Solution {
         return helper(nums, sums, nums.length-1, sum/k);
     }
     
+	// Attempt to put nums[idx] into the all bins whose sum can be added to nums[idx] and remains no larger than target.
+	// I think it is possible that this function will visit a "permutation" of previously visited program state.
+	// If this is the case, then this algorithm can be further optimized.
     boolean helper(int[] nums, int[] sums, int idx, int target) {
         if (idx==-1) {
             for (int i=0; i<sums.length; i++) {
